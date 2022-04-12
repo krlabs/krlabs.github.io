@@ -1,0 +1,7 @@
+I"g<h1 id="how-restore-default-permissions-on-vps">How restore default permissions on VPS</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find /var/www/ -type d -exec chmod 755 {} \;
+find /var/www/ -type f -exec chmod 644 {} \;
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

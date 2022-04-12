@@ -1,0 +1,13 @@
+I"­<h1 id="how-easy-disable-xmlrpc-in-wordpress">How easy disable xmlrpc in WordPress</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># add in .htaccess
+&lt;Files xmlrpc.php&gt;
+order deny,allow
+ deny from all
+&lt;/Files&gt;
+ 
+# add in functions.php
+add_filter('xmlrpc_enabled', '__return_false');
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

@@ -1,0 +1,8 @@
+I"¥<h1 id="how-fix-some-acestreamplayer-error-in-debian">How fix some Acestreamplayer error in Debian</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apparmor_parser -r /etc/apparmor.d/*snap-confine* 
+sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*
+snap run acestreamplayer
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'jekyll'
-gem 'sass'
-gem 'compass'
-gem 'coffee-script'
-gem 'foreman'
+source "https://rubygems.org"
+
+gemspec
+
+gem "webrick", "~> 1.7"

@@ -1,0 +1,28 @@
+I"<h1 id="kr-laboratories-github">KR. Laboratories GitHub</h1>
+
+<p>Вітаємо на офіційній GitHub-сторінці IT-студії <strong>KR. Laboratories</strong>!</p>
+
+<p>Тут плануємо публікувати короткі технічні матеріали, документації, замітки. Зокрема вихідний код деяких додатків та програмного забезпечення, яке розповсюджується за вільною <em>Open Source ліцензією</em>.</p>
+
+<p><img src="https://github.githubassets.com/images/icons/emoji/octocat.png" alt="Octocat" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="item"&gt;
+  &lt;h3&gt;&lt;a href="/about.html"&gt;
+    
+  &lt;/a&gt;&lt;/h3&gt;
+
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+  
+
+  
+&lt;div class="item"&gt;
+  &lt;h3&gt;&lt;a href="/"&gt;
+    
+  &lt;/a&gt;&lt;/h3&gt;
+
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+:ET

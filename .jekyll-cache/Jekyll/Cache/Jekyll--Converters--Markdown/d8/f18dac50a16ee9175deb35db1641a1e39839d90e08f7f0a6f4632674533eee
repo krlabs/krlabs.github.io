@@ -1,0 +1,11 @@
+I"’<h1 id="how-optimize-phpini-for-cms-wordpress">How optimize php.ini for CMS WordPress</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>max_execution_time = 300
+max_input_time = 120
+max_input_vars = 3000
+memory_limit = 256M
+post_max_size = 80M
+upload_max_filesize = 60M
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

@@ -1,0 +1,41 @@
+I"™<h1 id="different-seo-redirects-for-htaccess">Different SEO-redirects for .htaccess</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># HTTP to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+ 
+# Non-Slash to Slash URLs
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+&lt;/IfModule&gt;
+ 
+# www to non-www 301
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.domain.com$
+RewriteRule (.*) https://domain.com/$1 [R=301,L]
+&lt;/IfModule&gt;
+ 
+# WORDPRESS brilliant 301 redirect www to non-www
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+ 
+# Redirect from index to homepage
+ 
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteRule ^index\.html / [R=301,L]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+&lt;/IfModule&gt;
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

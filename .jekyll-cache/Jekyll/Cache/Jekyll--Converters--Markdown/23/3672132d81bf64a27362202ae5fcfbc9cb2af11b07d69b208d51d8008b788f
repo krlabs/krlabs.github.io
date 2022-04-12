@@ -1,0 +1,12 @@
+I"¬<h1 id="how-create-correct-shortlinks-for-whatsapp-and-viber">How create correct shortlinks for WhatsApp and Viber</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># WhatsApp
+ 
+https://wa.me/message/+mobilenumber_with_country_code
+ 
+# Viber
+ 
+&lt;a href="viber://add?number=%2B380914818290"&gt;
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

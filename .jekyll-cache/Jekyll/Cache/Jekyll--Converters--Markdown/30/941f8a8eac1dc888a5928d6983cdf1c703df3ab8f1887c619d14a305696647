@@ -1,0 +1,29 @@
+I"[<h1 id="how-make-responsive-contact-form-7-on-mobile-devices-in-wordpress">How make responsive Contact Form 7 on mobile devices in WordPress</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@media screen and (max-width: 768px){
+.wpcf7 #Personal-Details, .wpcf7 #Education, .wpcf7 #Profession, .wpcf7 #To-Teach, .wpcf7 #Timings, .wpcf7 #Colscol, .wpcf7 #Upload {
+height:auto;
+padding: 20px;
+}
+#Teacher-column #left {
+width: 100%;
+float: none;
+margin-bottom: 20px;
+}
+ 
+.input-text, input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea {
+width: 100%;
+}
+ 
+span.wpcf7-list-item {
+display: block;
+margin: 20px 0 0 1em;
+}
+ 
+.wpcf7 #Upload p{
+line-height:21px;
+}
+}
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET

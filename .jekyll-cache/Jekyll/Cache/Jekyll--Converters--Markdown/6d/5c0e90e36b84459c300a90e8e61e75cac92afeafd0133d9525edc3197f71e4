@@ -1,0 +1,48 @@
+I"L<h1 id="rss-tricks--hooks-in-cms-wordpress">RSS tricks &amp; hooks in CMS WordPress</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* add thumbnails to RSS feed in Wordpress - edit functions.php */
+ 
+add_filter( 'the_excerpt_rss', 'add_thumbnail_to_feed' );
+add_filter( 'the_content_feed', 'add_thumbnail_to_feed' );
+ 
+function add_thumbnail_to_feed( $content ){
+    $img = get_the_post_thumbnail( null, array(100, 80), array( 'align' =&gt; 'left', 'style' =&gt; 'margin-right:15px;' ) );
+    $content =  $img . $content;
+ 
+    return $content;
+}
+ 
+/* make delay for the sending posts to RSS in WordPress */
+ 
+function publish_later_on_feed($where) {
+global $wpdb;if ( is_feed() ) {
+$now = gmdate('Y-m-d H:i:s');
+$wait = '5'; // your delay
+$device = 'MINUTE'; // you can change to MINUTE, HOUR, DAY, WEEK, MONTH, YEAR
+$where .= " AND TIMESTAMPDIFF($device, $wpdb-&gt;posts.post_date_gmt, '$now') &gt; $wait ";
+}
+return $where;
+}
+add_filter('posts_where', 'publish_later_on_feed');
+ 
+/* exclude category from homepage and RSS feed in WordPress */
+ 
+function exclude_category($query) {
+ if ($query-&gt;is_feed || ($query-&gt;is_home || ($query-&gt;is_search))){
+ $query-&gt;set('cat','-YOUR_CATEGORY_ID');} 
+ return $query; }
+add_filter('pre_get_posts','exclude_category');
+ 
+// if you want exclude only from RSS-feed:
+ 
+function myFilter($query) {
+if ($query-&gt;is_feed) {
+$query-&gt;set('cat','-YOUR_CATEGORY_ID');
+}
+return $query;
+}
+ 
+add_filter('pre_get_posts','myFilter');
+</code></pre></div></div>
+<p><a href="http://localhost:4000">back</a></p>
+:ET
