@@ -13,6 +13,6 @@ https://wa.me/message/+mobilenumber_with_country_code
  
 # Viber
  
-<a href="viber://add?number=%2B380914818290">
+<a href="viber://add?number=%2B380934443333">
 ```
 [back]({{ site.url }})
